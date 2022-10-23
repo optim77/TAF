@@ -1,0 +1,7 @@
+pl\tomaszbuga\tests\GoogleTest.class
+pl\tomaszbuga\pom\DayCalculator.class
+pl\tomaszbuga\tests\FirstTest.class
+pl\tomaszbuga\framework\PageObject.class
+pl\tomaszbuga\pom\HomePage.class
+pl\tomaszbuga\framework\BaseTest.class
+pl\tomaszbuga\utils\ByLocatorFinder.class
