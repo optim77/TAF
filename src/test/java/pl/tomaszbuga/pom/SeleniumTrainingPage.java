@@ -39,7 +39,7 @@ public class SeleniumTrainingPage extends PageObject {
     }
 
     public String checkPassword(){
-        return checkAttributegit Type(passwordInput);
+        return checkAttributeType(passwordInput);
     }
 
     public SeleniumTrainingPage enterTextToPasswordInput(String text){
