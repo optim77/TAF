@@ -105,6 +105,7 @@ public class SeleniumTrainingPage extends PageObject {
         for(WebElement m: months){
             if (month == counter){
                 m.click();
+                break;
             }
             counter++;
         }
