@@ -6,6 +6,11 @@ import org.testng.annotations.Test;
 import pl.tomaszbuga.framework.BaseTest;
 import pl.tomaszbuga.pom.SeleniumTrainingPage;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+
 public class FirstTest extends BaseTest {
 
     SeleniumTrainingPage seleniumTrainingPage;
@@ -57,6 +62,14 @@ public class FirstTest extends BaseTest {
         Assert.assertEquals(type, typeFromPasswordInput);
         // check returned length of string
         Assert.assertEquals(textFromPasswordInput.length(), password.length());
+    }
+
+    @Test()
+    public void setDataInDataPicker() throws ParseException {
+        int year = 2023, month = 4, day = 22;
+        LocalDate expectedDate = LocalDate.of(year, month, day);
+        String returnedDate = seleniumTrainingPage.setData(year, month, day);
+        Assert.assertEquals(seleniumTrainingPage.changeDateFormat(returnedDate), expectedDate.toString());
     }
 
     private String getTextAfterClear() {

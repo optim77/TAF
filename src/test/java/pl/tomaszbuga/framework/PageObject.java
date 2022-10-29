@@ -2,9 +2,7 @@ package pl.tomaszbuga.framework;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -38,6 +36,13 @@ public abstract class PageObject {
         // .getAttribute("value"), bo wartośc wpisana w input
         // nie jest dostępna do pobrania przez .getText()
         return element.getAttribute("value");
+    }
+
+    protected String getTextFromDataPickerInput(WebElement element){
+        // use instead of .getText or .getAttribute("value") because
+        // datepicker input doesn't have this values
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        return (String) jse.executeScript("return arguments[0].value", element);
     }
 
     protected String checkAttributeType(WebElement element){

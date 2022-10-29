@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pl.tomaszbuga.framework.BaseTest;
-import pl.tomaszbuga.pom.Dog;
+
 
 import java.time.*;
 import java.util.Arrays;
