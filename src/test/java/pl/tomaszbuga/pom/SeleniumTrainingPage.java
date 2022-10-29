@@ -72,6 +72,8 @@ public class SeleniumTrainingPage extends PageObject {
     }
 
     public String setData(int year, int month, int day){
+        datePickerInput.click();
+        waitUntilElementIsVisible(YearAndMonthDatePickerButton);
         setYear(year);
         setMonth(month);
         setDay(day);
@@ -80,8 +82,6 @@ public class SeleniumTrainingPage extends PageObject {
     }
     private void setYear(int year){
         LOGGER.info("Set " + year + " year on datepicker");
-        datePickerInput.click();
-        waitUntilElementIsVisible(YearAndMonthDatePickerButton);
         YearAndMonthDatePickerButton.click();
         String defaultYear = yearClickDatePicker.getText();
         int accYear = Integer.parseInt(defaultYear);
@@ -115,13 +115,11 @@ public class SeleniumTrainingPage extends PageObject {
     private void setDay(int day){
         LOGGER.info("Set " + day + " year on datepicker");
         List<WebElement> days = driver.findElements(By.className("day"));
-        int counter = 1;
         for(WebElement d: days){
             if(day == Integer.parseInt(d.getText())){
                 d.click();
                 break;
             }
-            counter++;
         }
         LOGGER.info("Month has been entered");
     }
