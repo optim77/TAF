@@ -131,6 +131,7 @@ public class SecondTestPage extends PageObject {
             e.printStackTrace();
         }
     }
+    // Scroll site to bottom and then open next page
     private void openNextPage(String searchText) throws IOException, InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)", "");
