@@ -1,15 +1,3 @@
-# Test Automation Framework
-
-Created by Tomasz Buga, SDET | https://www.tomaszbuga.pl
-
-GitHub: https://github.com/n4bik
-
-LinkedIn: https://www.linkedin.com/in/tomasz-buga-79933886/
-
-## Project Overview
-
-Test Automation Framework - Reusable template for Java/Selenium frameworks.
-
 ## Tech Stack
 
 `Java 17` `Maven` `TestNG` `Selenium` `WebDriverManager` `Apache Commons Lang3` `Log4J2`
